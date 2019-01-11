@@ -33,6 +33,8 @@ public class SignUpFormStagiaire {
     private String codePostal;
     
     private String tel;
+    
+    private String cv;
 	
 
 	public String getName() {
@@ -133,7 +135,14 @@ public class SignUpFormStagiaire {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
+	
+	public  String getCv() {
+		return cv; 
+	}
 
+	public void setcv(String cv) {
+		this.cv = cv;
+	}
 
 	public SignUpFormStagiaire() {
 		// TODO Auto-generated constructor stub

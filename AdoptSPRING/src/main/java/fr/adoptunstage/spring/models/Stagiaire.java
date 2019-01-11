@@ -29,6 +29,11 @@ public class Stagiaire extends User {
 	@Column(name = "tel")
 	private String tel;
 	
+	@Column(name = "cv")
+	private String cv;
+	
+	
+
 	@ManyToMany(fetch = FetchType.LAZY,
             cascade = {
                 CascadeType.PERSIST,
@@ -112,16 +117,24 @@ public class Stagiaire extends User {
 		this.tel = tel;
 	}
 
+	public String getCv() {
+		return cv;
+	}
+
+	public void setCv(String cv) {
+		this.cv = cv;
+	}
 	
 	public Stagiaire() {}
 
-	public Stagiaire(String name, String username, String email, String password, String prenom, String etablissement, String ville, String codePostal, String tel) {
+	public Stagiaire(String name, String username, String email, String password, String prenom, String etablissement, String ville, String codePostal, String tel, String cv) {
 		super(name, username, email, password);
 		this.prenom = prenom;
 		this.etablissement = etablissement;
 		this.ville = ville;
 		this.codePostal = codePostal;
 		this.tel = tel;
+		this.cv = cv;
 		this.offres = new HashSet<Offre>();
 	}
 

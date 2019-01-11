@@ -181,7 +181,7 @@ import { OffreItemComponent } from './Router/PageBoardEntreprise/offre-item/offr
     HttpClientModule,
     NgbModule,
     ReactiveFormsModule,
-    SimpleModalModule.forRoot({container: "modal-container"}),
+    SimpleModalModule.forRoot({ container: "modal-container" }),
     UiSwitchModule
   ],
 
