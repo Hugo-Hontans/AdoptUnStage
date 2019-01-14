@@ -4,22 +4,21 @@
     </div>
     <div class="bodyOffres">
         <div *ngIf="offres" class="table-responsive">
-            <table class="table table-striped thead-light table-hover">
-                <thead class="tableHeader">
-                    <tr>
-                        <th>Secteur</th>
-                        <th>Offre</th>
-                        <th>Ville</th>
-                        <th>Détail</th>
+            <table role="table" class="table table-striped thead-light table-hover table-bordered ">
+                <thead role="rowgroup" class="tableHeader">
+                    <tr role="row">
+                        <th role="columnheader">Secteur</th>
+                        <th role="columnheader">Offre</th>
+                        <th role="columnheader">Ville</th>
+                        <th role="columnheader">Détail</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr *ngFor="let offre of offres | async" style="cursor: pointer;" [routerLink]="['/detailoffre', offre.id]">
-                        <td>{{offre.entreprise.secteur}}</td>
-                        <td> {{offre.titre}}<br> {{offre.entreprise.raisonSociale}} </td>
-                        <td> {{offre.ville}} </td>
-                        <td><i [routerLink]="['/detailoffre', offre.id]" class="material-icons" style="color:blue; cursor: pointer;">remove_red_eye</i></td>
-
+                <tbody role="rowgroup">
+                    <tr role="row" *ngFor="let offre of offres | async" style="cursor: pointer;" [routerLink]="['/detailoffre', offre.id]">
+                        <td role="cell">{{offre.entreprise.secteur}}</td>
+                        <td role="cell"> {{offre.titre}}<br> {{offre.entreprise.raisonSociale}} </td>
+                        <td role="cell"> {{offre.ville}} </td>
+                        <td role="cell"><i [routerLink]="['/detailoffre', offre.id]" class="material-icons">pageview</i></td>
                     </tr>
                 </tbody>
             </table>
